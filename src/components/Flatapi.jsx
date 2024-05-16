@@ -17,10 +17,22 @@ const Flatapi = () => {
 
   console.log(data);
 
-  const pokimonShow = () => {};
+  const pokimonShow = ({item}) => {
+    console.log('item=>>>>', item);
+    <View>
+      <Text style={{color: 'black', fontSize: 25}}>{item.title}</Text>
+    </View>;
+  };
   return (
     <View>
-      <FlatList data={data} renderItem={pokimonShow} />
+      <FlatList
+        keyExtractor={item => item.name}
+        data={data}
+        renderItem={pokimonShow}
+        item={({item}) => {
+          <pokimonShow />;
+        }}
+      />
     </View>
   );
 };
