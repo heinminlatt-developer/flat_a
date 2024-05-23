@@ -2,11 +2,12 @@ import {StyleSheet, Text, View} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Flatapi from './src/components/Flatapi';
 import Flatapione from './src/components/Flatapione';
+import PokimonCard from './src/components/PokimonCard';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Flatapione />
+      <PokimonCard />
     </View>
   );
 };

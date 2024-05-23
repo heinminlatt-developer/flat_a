@@ -7,10 +7,8 @@ import {
   Image,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
-
 const Flatapione = () => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,7 +40,6 @@ const Flatapione = () => {
       </View>
     );
   };
-
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
